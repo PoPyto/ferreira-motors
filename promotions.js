@@ -5,7 +5,19 @@ const promotionCars = [
     model: 'Modelo do carro',
     year: 'Ano do carro',
     mileage: 'KMs rodados',
+    originalPrice: 'R$ -----',
     price: 'R$ -----',
+    href: '',
+    images: [],
+  },
+  {
+    name: 'Porsche 911 Carrera',
+    make: 'Porsche',
+    model: '911 Carrera',
+    year: '2022/2023',
+    mileage: '12.000 KM',
+    originalPrice: 'R$ -----',
+    price: 'R$ 789.900,00',
     href: '',
     images: [],
   },
@@ -22,6 +34,7 @@ const promotionMake = document.querySelector('.promotion-make');
 const promotionModel = document.querySelector('.promotion-model');
 const promotionYear = document.querySelector('.promotion-year');
 const promotionMileage = document.querySelector('.promotion-mileage');
+const promotionOriginalPrice = document.querySelector('.promotion-original-price');
 const promotionPrice = document.querySelector('.promotion-price');
 
 if (promotionCars.length > 0) {
@@ -64,6 +77,7 @@ if (promotionCars.length > 0) {
     promotionModel.textContent = car.model;
     promotionYear.textContent = car.year;
     promotionMileage.textContent = car.mileage;
+    promotionOriginalPrice.textContent = car.originalPrice;
     promotionPrice.textContent = car.price;
     renderImage(car);
     updateAngleControls(car);
